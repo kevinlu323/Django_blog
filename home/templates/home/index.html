@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+<title>Stay tight, website is coming soon!</title>
+
+<!--CSS-->
+<link rel="stylesheet" href="{% static 'home/css/style.css' %}">
+<link rel="stylesheet" href="{% static 'home/css/bootstrap-light.css' %}">
+<link href='http://fonts.googleapis.com/css?family=Oswald:400,300,700' rel='stylesheet' type='text/css'>
+<!--/CSS-->
+
+<!--JS-->
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<script src="{% static 'home/js/jquery.plugin.js' %}"></script>
+<script src="{% static 'home/js/jquery.countdown.js' %}"></script>
+<script>
+$(function () {
+	$('#defaultCountdown').countdown({until: new Date(2016, 3-1, 25)}); 
+	//Replace above date with your own, to find out more visit http://keith-wood.name/countdown.html
+});
+</script>
+<!--/JS-->
+
+</head>
+
+<body>
+
+<!--DARK OVERLAY-->
+<div class="overlay"></div>
+<!--/DARK OVERLAY-->
+
+<!--WRAP-->
+<div id="wrap">
+	<!--CONTAINER-->
+	<div class="container">
+		<img src="{% static 'home/images/paperplane.png' %}" alt="Paper Plane" class="image-align" />
+		<h1>
+			<span>I am</span><br/>
+			Reaching For <span class="yellow">The Moon.</span>
+		</h1>
+		<p>My site is currently <strong>under construction</strong> but I am working hard<br/> to create a new and fresh design.</p>
+		<!--<div id="defaultCountdown"></div>-->
+		<!--
+		<form action="#">
+			<input type="text" name="email" id="email" value="Subscribe to fond out when we are done">
+			<input type="submit" value="GO!">
+		</form>
+		-->
+		<!--<p class="copyright">Produly designed by <a href="https://herowp.com" target="_blank">HeroWP.com</a></p>-->
+	</div>
+	<!--/CONTAINER-->
+</div>
+<!--/WRAP-->
+
+</body>
+</html>

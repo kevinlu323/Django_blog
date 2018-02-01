@@ -1,0 +1,44 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+
+<link rel="stylesheet" type="text/css" href="{% static 'grace_bday/css/style.css' %}" />
+<!--<link rel="stylesheet" type="text/css" href="style.css"/>-->
+<link rel="stylesheet" type="text/css" href="{% static 'grace_bday/css/button_style.css' %}" />
+<!--<link href='button_style.css' rel='stylesheet' type='text/css'>-->
+
+<body>
+
+<div class="bgimg">
+  <div class="topleft">
+    <p>Feast on Jan 27 2018 at 07:30pm CST</p>
+  </div>
+  <div class="middle">
+    <!--<h1>Celebrating 18 year old birthday for Grace!</h1>-->
+    <p class="center_text">Celebrating 18 year old birthday for Grace!</p>
+    <hr>
+    <p class="counter" id="demo"></p>
+  </div>
+</div>
+
+<div class="middlelower">
+  <a href="http://posts.careerengine.us/p/580709d2c1e4b801b8bcc70d" class="btn">
+  <svg>
+    <defs>
+        <linearGradient id="grad1">
+            <stop offset="0%" stop-color="#f7f388"/>
+            <stop offset="100%" stop-color="#f788ef" />
+        </linearGradient>
+    </defs>
+     <rect x="5" y="5" rx="25" fill="none" stroke="url(#grad1)" width="266" height="50"></rect>
+  </svg>
+  <span>Explore the feast</span>
+</a>
+</div>
+
+<script src="{% static 'grace_bday/js/countdown.js' %}"></script>
+<!--<script src="js/countdown.js"></script>-->
+
+</body>
+</html>
