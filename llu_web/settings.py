@@ -32,6 +32,7 @@ ALLOWED_HOSTS = ['*']
 
 INSTALLED_APPS = [
     # 'home.apps.HomeConfig',
+    'blogger.apps.BloggerConfig',
     'home',
     'grace_bday',
     'django.contrib.admin',
