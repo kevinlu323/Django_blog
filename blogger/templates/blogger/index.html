@@ -1,0 +1,28 @@
+{% extends "blogger/base.html" %}
+{% block content %}
+<article class="entry">
+
+  <header class="entry-header">
+
+    <h2 class="entry-title">
+      <a href="single.html" title="">{{ post.title }}</a>
+    </h2> 				 
+					
+    <div class="entry-meta">
+      <ul>
+	<li>{{ post.created_time }}</li>
+	<span class="meta-sep">&bull;</span>								
+	<li><a href="#" title="" rel="category tag">{{ post.category }}</a></li>
+	<span class="meta-sep">&bull;</span>
+	<li>{{ post.author }}</li>
+      </ul>
+    </div> 
+					 
+  </header> 
+					
+  <div class="entry-content">
+    <p>{{ post.content }}</p>
+  </div> 
+
+</article> <!-- end entry -->
+{% endblock %}
