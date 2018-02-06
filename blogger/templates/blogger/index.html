@@ -1,5 +1,6 @@
 {% extends "blogger/base.html" %}
 {% block content %}
+{% for post in post_list %}
 <article class="entry">
 
   <header class="entry-header">
@@ -25,4 +26,7 @@
   </div> 
 
 </article> <!-- end entry -->
+{% empty %}
+<h2 class="entry-title">Oops! no post has been created!</h2>
+{% endfor %}
 {% endblock %}
