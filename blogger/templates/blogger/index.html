@@ -6,26 +6,26 @@
   <header class="entry-header">
 
     <h2 class="entry-title">
-      <a href="single.html" title="">{{ post.title }}</a>
-    </h2> 				 
-					
+      <a href="{% url 'blogger:detail' post.id %}" title="">{{ post.title }}</a>
+    </h2>
+    
     <div class="entry-meta">
       <ul>
 	<li>{{ post.created_time }}</li>
 	<span class="meta-sep">&bull;</span>								
-	<li><a href="#" title="" rel="category tag">{{ post.category }}</a></li>
+	<li><a href="#" rel="category tag">{{ post.category }}</a></li>
 	<span class="meta-sep">&bull;</span>
-	<li>{{ post.author }}</li>
+	<li>{{ post.author.first_name }}</li>
       </ul>
     </div> 
-					 
+    
   </header> 
-					
+  
   <div class="entry-content">
     <p>{{ post.content }}</p>
   </div> 
 
-</article> <!-- end entry -->
+</article> <!-- end article -->
 {% empty %}
 <h2 class="entry-title">Oops! no post has been created!</h2>
 {% endfor %}

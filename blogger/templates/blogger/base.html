@@ -9,7 +9,7 @@
    <!--- Basic Page Needs
    ================================================== -->
    <meta charset="utf-8">
-	<title>Linkui's Site</title>
+	<title>Linkui gets luck</title>
 	<meta name="description" content="">
 	<meta name="author" content="">
 
@@ -43,7 +43,7 @@
 
    		<div class="header-content twelve columns">
 
-		      <h1 id="logo-text"><a href="index.html" title="">Welcome to my site!</a></h1>
+		      <h1 id="logo-text"><a href="{% url 'blogger:index' %}" title="">Linkui gets luck</a></h1>
 				<p id="intro">当你决定出发，最大的困难已不复存在!</p>
 
 			</div>			
@@ -58,7 +58,7 @@
 	   	<div class="row">    		            
 
 			   	<ul id="nav" class="nav">
-			      	<li class="current"><a href="index.html">Home</a></li>
+			      	<li class="current"><a href="{% url 'blogger:index' %}">Home</a></li>
 			      	<li class="has-children"><a href="#">Dropdown</a>
 	                  <ul>
 	                     <li><a href="#">Submenu 01</a></li>
@@ -74,7 +74,7 @@
 	                     <li><a href="single.html">Single Blog</a></li>	                     
 	                  </ul>
 			      	</li>		      	
-			      	<li><a href="page.html">Page</a></li>
+			      	<li><a href="/admin">Admin</a></li>
 			   	</ul> <!-- end #nav -->			   	 
 
 	   	</div> 
