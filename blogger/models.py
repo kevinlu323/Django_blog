@@ -38,9 +38,11 @@ class Post(models.Model):
 class Comment(models.Model):
     id = models.AutoField(primary_key=True)
     post = models.ForeignKey(Post, on_delete=models.CASCADE)
-    author = models.ForeignKey(User, on_delete=models.CASCADE)
+    # author = models.ForeignKey(User, on_delete=models.CASCADE)
+    author = models.CharField(max_length=20)
     content = models.TextField()
     created_time = models.DateTimeField(auto_now=True)
+    is_approved = models.BooleanField(default=False)
 
     def __str__(self):
         shortContent = self.content[:40] + "..." if len(self.content) > 40 else self.content

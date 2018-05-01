@@ -1,32 +1,36 @@
 {% extends "blogger/base.html" %}
 {% block content %}
-{% for post in post_list %}
-<article class="entry">
+<div id="main" class="eight columns">
+  {% for post in post_list %}
+  <article class="entry">
 
-  <header class="entry-header">
+    <header class="entry-header">
 
-    <h2 class="entry-title">
-      <a href="{% url 'blogger:detail' post.id %}" title="">{{ post.title }}</a>
-    </h2>
+      <h2 class="entry-title">
+	<a href="{% url 'blogger:detail' post.id %}" title="">{{ post.title }}</a>
+      </h2>
+      
+      <div class="entry-meta">
+	<ul>
+	  <li>{{ post.created_time }}</li>
+	  <span class="meta-sep">&bull;</span>								
+	  <li><a href="#" rel="category tag">{{ post.category }}</a></li>
+	  <span class="meta-sep">&bull;</span>
+	  <li>{{ post.author.first_name }}</li>
+	</ul>
+      </div> 
+      
+    </header> 
     
-    <div class="entry-meta">
-      <ul>
-	<li>{{ post.created_time }}</li>
-	<span class="meta-sep">&bull;</span>								
-	<li><a href="#" rel="category tag">{{ post.category }}</a></li>
-	<span class="meta-sep">&bull;</span>
-	<li>{{ post.author.first_name }}</li>
-      </ul>
+    <div class="entry-content">
+      <p>{{ post.content }}</p>
     </div> 
-    
-  </header> 
-  
-  <div class="entry-content">
-    <p>{{ post.content }}</p>
-  </div> 
 
-</article> <!-- end article -->
-{% empty %}
-<h2 class="entry-title">Oops! no post has been created!</h2>
-{% endfor %}
+  </article> <!-- end article -->
+  {% empty %}
+  <h2 class="entry-title">Oops! no post has been created!</h2>
+
+  {% endfor %}
+</div>
+{% include "blogger/base_sidebar.html" %}
 {% endblock %}

@@ -514,8 +514,8 @@ ol.commentlist {
 #comments form { margin-top: 36px; }
 #comments form label {
    padding-left: 24px;
-   width: 41.66667%;
-   float: right;
+   width: 20.66667%;
+   float: left;
 }
 #comments form div {
    margin: 12px 0 18px 0;
@@ -523,14 +523,15 @@ ol.commentlist {
 #comments form input,
 #comments form textarea,
 #comments form select {
-   width: 58.33333%;
-   float: left;
+    width: 79.33333%;
+   float: right;
+   resize: none;
 }
 #comments form .message label {
    display: none;
 }
 #comments form textarea {
-   width: 100%;
+   width: 79.33333%;
 }
 #comments form button.submit {
 	text-transform: uppercase;
