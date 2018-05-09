@@ -22,6 +22,7 @@ class Category(models.Model):
 class Post(models.Model):
     id = models.AutoField(primary_key=True)
     title = models.CharField(max_length=100)
+    abstract = models.CharField(max_length=500, blank=True)
     content = models.TextField()
     created_time = models.DateTimeField(auto_now=True)
     author = models.ForeignKey(User, on_delete=models.CASCADE)

@@ -23,7 +23,11 @@
     </header> 
     
     <div class="entry-content">
-      <p>{{ post.content }}</p>
+      {% if post.abstract %}
+      <p>{{ post.abstract }}</p>
+      {% else %}
+      <p>{{ post.content|safe }}</p>
+      {% endif %}
     </div> 
 
   </article> <!-- end article -->
